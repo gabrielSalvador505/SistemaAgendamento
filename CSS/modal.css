@@ -4,13 +4,12 @@
 .modal {
     width: 100%;
     height: 100vh;
-    display: none;
-    position: fixed;
+    display: flex;
+    position: relative;
     top: 0px;
     left:0px;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 .show.modal {
     display: flex;
@@ -36,7 +35,7 @@
 
 .ini .modal-content::before {
     left: 60%;
-    border-radius: 10 10px 10px 10;
+    border-radius: 0 10px 10px 0;
 }
 
 /*----------------------------------------------------
@@ -74,7 +73,7 @@
 }
 
 /*----------------------------------------------------
----CADASTRAR------------------------------------------
+---registrer-js---------------------------------------
 ----------------------------------------------------*/
 .modal-register {
     display: flex;
@@ -130,6 +129,10 @@
     width: 100%;
     background-color: #EBEBEB;
 }
+.second-content form input:focus{
+    outline: 0;
+    box-shadow: 0;
+}
 input:-webkit-autofill {
     box-shadow: 0 0 0 1000px #EBEBEB inset !important;
     -webkit-text-fill-color: #000 !important;
@@ -151,7 +154,7 @@ input:-webkit-autofill {
     padding: 0 10px;
 }
 /*----------------------------------------------------
----ENTRAR---------------------------------------------
+---login-js-------------------------------------------
 ----------------------------------------------------*/
 .modal-login {
     position: absolute;
@@ -166,15 +169,31 @@ input:-webkit-autofill {
     order: 1;
 }
 
+/*----------------------------------------------------
+---service-js-----------------------------------------
+----------------------------------------------------*/
+
+
+
+/*----------------------------------------------------
+---display--------------------------------------------
+----------------------------------------------------*/
+
 .register-js .modal-login .first-content,
 .register-js .modal-login .second-content {
     display: none;
-
 }
 
 .login-js .modal-register .first-content,
 .login-js .modal-register .second-content,
 .ini .modal-register .first-content,
 .ini .modal-register .second-content {
+    display: none;
+}
+
+.service-js .modal-register .first-content,
+.service-js .modal-register .second-content,
+.service-js .modal-login .first-content,
+.service-js .modal-login .second-content {
     display: none;
 }

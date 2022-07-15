@@ -1,10 +1,9 @@
 function alterModal(type, alter) {
     const modal = document.getElementById("modal");
     if (modal.classList.contains(alter));
-        modal.classList.remove('ini')
+        modal.classList.remove('ini');
         modal.classList.remove(alter);
         modal.classList.add(type);
-        
 };
 
 function startModal(show){
