@@ -256,21 +256,22 @@ input:-webkit-autofill {
 
 .modal-service .second-content .service-list .item-list {
     background-color: #EBEBEB;
-    height: 25%;
-    width: 20%;
-    padding: 7px 12px;
+    position: relative;
+    height: 50px;
+    width: 150px;
     border-radius: 12px;
     font-size: 20px;
-    margin: 2% 2%;
+    margin: 2%;
     font-family: sans-serif;
-    text-align: center;
-
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    vertical-align: center;
+    padding: 2px;
 }
 
 .modal-service .second-content .service-list input[type=radio]:checked  + label {
     border: #165690 solid 2px;
-    padding: 5px 10px;
-
+    padding: 0;
 }
 
 
