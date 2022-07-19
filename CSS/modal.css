@@ -17,7 +17,7 @@
 .modal-content {
     width: 70%;
     height: 60%;
-    position: relative;
+    position: absolute;
     display: flex;
     background-color: #fff;
     border-radius: 10px;
@@ -71,6 +71,20 @@
         border-radius: 0 10px 10px 0;
     }
 }
+.service-js .modal-content::before {
+    animation: serviceModal 0.8s;
+    left: 0;
+    border-radius: 10px 0 0 10px;
+}
+@keyframes serviceModal {
+    from {
+        left: 60%;
+        border-radius: 0 10px 10px 0;
+    } to {
+        left: 0;
+        border-radius: 10px 0 0 10px;
+    }
+}
 
 /*----------------------------------------------------
 ---registrer-js---------------------------------------
@@ -117,13 +131,15 @@
     margin: 5px;
     font-size: 12px;
 }
-.second-content form {
+.modal-register .second-content form,
+.modal-login .second-content form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.second-content form input{
+ .modal-register .second-content form input,
+ .modal-login .second-content form input{
     border: none;
     height: 35px;
     width: 100%;
@@ -140,6 +156,7 @@ input:-webkit-autofill {
 .second-content form .btn {
     margin: 20px
 }
+
 .label-input {
     display: flex;
     align-self: center;
@@ -173,27 +190,117 @@ input:-webkit-autofill {
 ---service-js-----------------------------------------
 ----------------------------------------------------*/
 
+.modal-service .first-content {
+    height: 100%;
+}
+
+.modal-service .first-content button {
+    display: flex;
+    position: relative;
+    align-items: center;
+    top: 15px;
+    left: 15px;
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.modal-service .first-content .arrow {
+    transform: translateY(2px);
+    color: #fff;
+    padding: 18px 4px 20px 8px;
+    border-radius: 15px;
+}
+
+.modal-service .first-content h3 {
+    margin: 5px 10px 5px 5px;
+    color: #165690;
+    font-size: 24px;
+    visibility: hidden
+}
+
+.modal-service .first-content button:hover {
+    background-color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.modal-service .first-content button:hover .arrow {
+    color: #165690;
+}
+.modal-service .first-content button:hover h3{
+    visibility: visible;
+}
+
+.modal-service .first-content h2{
+    margin-top: 5%;
+}
+
+
+.modal-service .second-content  {
+    height: 100%;
+}
+
+.modal-service .second-content .service-list {
+    width: 90%;
+    height: 60%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.modal-service .second-content .service-list .item-list {
+    background-color: #EBEBEB;
+    height: 25%;
+    width: 20%;
+    padding: 7px 12px;
+    border-radius: 12px;
+    font-size: 20px;
+    margin: 2% 2%;
+    font-family: sans-serif;
+    text-align: center;
+
+}
+
+.modal-service .second-content .service-list input[type=radio]:checked  + label {
+    border: #165690 solid 2px;
+    padding: 5px 10px;
+
+}
+
+
+
+.modal-service .second-content input {
+    visibility: hidden;
+    position: absolute;
+}
 
 
 /*----------------------------------------------------
 ---display--------------------------------------------
 ----------------------------------------------------*/
 
-.register-js .modal-login .first-content,
-.register-js .modal-login .second-content {
+.register-js .modal-login, 
+.register-js .modal-service {
     display: none;
 }
 
-.login-js .modal-register .first-content,
-.login-js .modal-register .second-content,
-.ini .modal-register .first-content,
-.ini .modal-register .second-content {
+.login-js .modal-register,
+.login-js .modal-service,
+.ini .modal-register {
     display: none;
 }
 
-.service-js .modal-register .first-content,
-.service-js .modal-register .second-content,
-.service-js .modal-login .first-content,
-.service-js .modal-login .second-content {
+.ini .modal-service {
+    display: none;
+}
+
+.service-js .modal-register,
+.service-js .modal-login  {
     display: none;
 }

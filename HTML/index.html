@@ -77,9 +77,8 @@
                                 <i class="fa-solid fa-key icon-input"></i>
                                 <input type="password" name="confpass" placeholder="  Confirmar senha">
                             </label>
-                                
-                            <button class="btn btn-principal">cadastrar</button>
                         </form>
+                        <button class="btn btn-principal" onclick="alterModal('login-js', 'register-js')">cadastrar</button>
                     </div>
                 </div>
                 <div class="modal-content modal-login">
@@ -102,12 +101,40 @@
                             </label>
                         </form>
                         <button class="btn" onclick="alterModal('service-js', 'login-js')">logar</button>
-                        
                     </div>
                 </div>
+                <div class="modal-content modal-service">
+                    <div class="first-content">
+                        <button onclick="alterModal('login-js', 'service-js')"><i class="fa-solid fa-arrow-left-long fa-2xl arrow"></i> <h3>voltar</h3></button>
+
+                        <h2>Profissionais</h2>
+                    </div>
+                    <div class="second-content">
+                        <h2>Serviços</h2>
+                        <p>selecione um serviço desejado</p>
+                        <div class="service-list">
+                            <form action="/action_page.php" class="service-list">
+                                  <input type="radio" id="item1" name="serv" value="item1">
+                                  <label for="item1" class="item-list">Corte de Cabelo</label>
+                                  <input type="radio" id="item2" name="serv" value="item2">
+                                  <label for="item2" class="item-list">Pintar a Unha</label>
+                                  <input type="radio" id="item3" name="serv" value="item3">
+                                  <label for="item3" class="item-list">Exteção de Cílios</label>
+                                  <input type="radio" id="item4" name="serv" value="item4">
+                                  <label for="item4" class="item-list">Fazer Sobrancelha</label>
+                                  <input type="radio" id="item5" name="serv" value="item5">
+                                  <label for="item5" class="item-list">Aplicar unhas de Gel5</label>
+                                  <input type="radio" id="item6" name="serv" value="item6">
+                                  <label for="item6" class="item-list">Exteção de Cílios6</label>
+                                  <input type="radio" id="item7" name="serv" value="item7">
+                                  <label for="item7" class="item-list">Exteção de Cílios7</label>
+                                </form> 
+                        </div>
+                    </div>
+                </div>
+
             </div>
                 
-            </div>
         </div>
         <footer>
             
