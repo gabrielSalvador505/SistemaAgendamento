@@ -106,34 +106,45 @@
                 <div class="modal-content modal-service">
                     <div class="first-content">
                         <button onclick="alterModal('login-js', 'service-js')"><i class="fa-solid fa-arrow-left-long fa-2xl arrow"></i> <h3>voltar</h3></button>
-
-                        <h2>Profissionais</h2>
+                        
                     </div>
                     <div class="second-content">
-                        <h2>Serviços</h2>
-                        <p>selecione um serviço desejado</p>
-                        <div class="service-list">
-                            <form action="/action_page.php" class="service-list">
-                                  <input type="radio" id="item1" name="serv" value="item1" >
-                                  <label for="item1" class="item-list">Cabelo</label>
-                                  <input type="radio" id="item2" name="serv" value="item2">
-                                  <label for="item2" class="item-list">Unha</label>
-                                  <input type="radio" id="item3" name="serv" value="item3">
-                                  <label for="item3" class="item-list">Cílios</label>
-                                  <input type="radio" id="item4" name="serv" value="item4">
-                                  <label for="item4" class="item-list">Sobrancelha</label>
-                                  <input type="radio" id="item5" name="serv" value="item5">
-                                  <label for="item5" class="item-list">item</label>
-                                  <input type="radio" id="item6" name="serv" value="item6">
-                                  <label for="item6" class="item-list">item</label>
-                                  <input type="radio" id="item7" name="serv" value="item7">
-                                  <label for="item7" class="item-list">item</label>
-                                  <input type="radio" id="item8" name="serv" value="item8">
-                                  <label for="item8" class="item-list">item</label>
-                                  <input type="radio" id="item9" name="serv" value="item9">
-                                  <label for="item9" class="item-list">item</label>
-                                </form> 
-                        </div>
+                        <span>
+                            <h2>Serviços</h2>
+                            <p>selecione um serviço desejado</p>
+                        </span>
+                        <li class="classe">
+                            <span class="trigger show" onclick="useList()" id="trigger"><h3>Cabelo</h3><i class="fa-solid fa-angle-down"></i></span>
+                                <div class="service-list" id="serv-list">
+                                    <input type="radio" id="item1" name="serv" value="item1" >
+                                    <label for="item1" class="item-list">Cabelo</label>
+                                    <input type="radio" id="item2" name="serv" value="item2">
+                                    <label for="item2" class="item-list">Unha</label>
+                                    <input type="radio" id="item3" name="serv" value="item3">
+                                    <label for="item3" class="item-list">Cílios</label>
+                                </div>
+                            <span class="trigger"><h3>Sobrancelha</h3></span>
+                            <span class="trigger"><h3>Cílios</h3></span>
+                            <span class="trigger"><h3>Unha</h3></span>
+                        </li>
+                           <!-- <input type="radio" id="item1" name="serv" value="item1" >
+                            <label for="item1" class="item-list">Cabelo</label>
+                            <input type="radio" id="item2" name="serv" value="item2">
+                            <label for="item2" class="item-list">Unha</label>
+                            <input type="radio" id="item3" name="serv" value="item3">
+                            <label for="item3" class="item-list">Cílios</label>
+                            <input type="radio" id="item4" name="serv" value="item4">
+                            <label for="item4" class="item-list">Sobrancelha</label>
+                            <input type="radio" id="item5" name="serv" value="item5">
+                            <label for="item5" class="item-list">item</label>
+                            <input type="radio" id="item6" name="serv" value="item6">
+                            <label for="item6" class="item-list">item</label>
+                            <input type="radio" id="item7" name="serv" value="item7">
+                            <label for="item7" class="item-list">item</label>
+                            <input type="radio" id="item8" name="serv" value="item8">
+                            <label for="item8" class="item-list">item</label>
+                            <input type="radio" id="item9" name="serv" value="item9">
+                            <label for="item9" class="item-list">item</label>-->
                     </div>
                 </div>
 

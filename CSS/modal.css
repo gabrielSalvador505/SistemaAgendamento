@@ -13,6 +13,7 @@
 }
 .show.modal {
     display: flex;
+    transition: 2s;
 }
 .modal-content {
     width: 70%;
@@ -192,11 +193,14 @@ input:-webkit-autofill {
 
 .modal-service .first-content {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    transition: 2s;
 }
 
 .modal-service .first-content button {
     display: flex;
-    position: relative;
+    position: absolute;
     align-items: center;
     top: 15px;
     left: 15px;
@@ -232,30 +236,83 @@ input:-webkit-autofill {
     visibility: visible;
 }
 
-.modal-service .first-content h2{
-    margin-top: 5%;
+/*Second-content*/
+.modal-service .second-content p {
+    margin: 0;
+    font-size: 12px;
+}
+.modal-service .second-content span{
+    position: relative;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
-
-.modal-service .second-content  {
-    height: 100%;
-}
-
-.modal-service .second-content .service-list {
-    width: 90%;
-    height: 60%;
+.modal-service .second-content .classe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     position: absolute;
-    top: 15%;
+    top: 30%;
+    left: 10%;
+}
+
+.modal-service .second-content .classe .trigger {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 40%;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.modal-service .second-content .classe .service-list {
+    position: relative;
+    top: 25%;
     left: 50%;
     transform: translate(-50%);
-    display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: space-between;
 }
 
+.modal-service .second-content .classe.show .service-list {
+    animation: useList 0.3s;
+    width: 300px;
+    height: 200px;
+}
+.modal-service .second-content .classe.hidden .service-list {
+    animation: hiddenList 0.3s;
+    width: 300px;
+    height: 0px;
+}
+
+@keyframes useList {
+    from {
+        width: 300px;
+        height: 0;
+    } to {
+        width: 300px;
+        height: 200px;
+    }
+}
+@keyframes hiddenList {
+    from {
+        width: 300px;
+        height: 200px;
+    } to {
+        width: 300px;
+        height: 0px;
+    }
+}
+
 .modal-service .second-content .service-list .item-list {
-    background-color: #EBEBEB;
+    background-color: #fff;
+    color: #000;
     position: relative;
     height: 50px;
     width: 150px;
@@ -264,23 +321,39 @@ input:-webkit-autofill {
     margin: 2%;
     font-family: sans-serif;
     cursor: pointer;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-    vertical-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 2px;
+    font-weight: bolder;
+    transition: 0.3s;
 }
 
 .modal-service .second-content .service-list input[type=radio]:checked  + label {
-    border: #165690 solid 2px;
-    padding: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to bottom right, rgb(199, 139, 9) 0%, rgb(240, 179, 48) 30%, rgb(163, 113, 6) 100%);
+    color: #fff;
+    transform: scale(110%);
 }
 
-
+.modal-service .second-content .service-list input[type=radio]:active  + label {
+    box-shadow: none;
+    transform: scale(90%);
+    color: #fff;
+    background-color: #165690;
+}
 
 .modal-service .second-content input {
     visibility: hidden;
     position: absolute;
 }
 
+.modal-service .second-content  {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /*----------------------------------------------------
 ---display--------------------------------------------
@@ -289,19 +362,23 @@ input:-webkit-autofill {
 .register-js .modal-login, 
 .register-js .modal-service {
     display: none;
+    opacity: 0%;
 }
 
 .login-js .modal-register,
 .login-js .modal-service,
 .ini .modal-register {
     display: none;
+    opacity: 0%;
 }
 
 .ini .modal-service {
+    opacity: 0%;
     display: none;
 }
 
 .service-js .modal-register,
 .service-js .modal-login  {
     display: none;
+    opacity: 0%;
 }

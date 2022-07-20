@@ -14,3 +14,16 @@ function startModal(show){
             modal.classList.remove(show)
     })
 };
+
+function useList() {
+    const lista = document.getElementById("serv-list")
+    const trigger = document.getElementById("trigger")
+    
+
+    trigger.addEventListener('click', callList(),{
+
+        if (.classList.contains("")) {
+            
+        }
+    })
+}
