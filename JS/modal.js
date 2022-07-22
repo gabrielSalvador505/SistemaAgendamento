@@ -7,7 +7,7 @@ function alterModal(type, alter) {
 };
 
 function startModal(show){
-    const modal = document.getElementById("modal");
+    const modal = document.getElementById('modal');
     modal.classList.add(show);
     modal.addEventListener('click', function(exit) {
         if (exit.target.id == 'modal')
@@ -15,15 +15,23 @@ function startModal(show){
     })
 };
 
-function useList() {
-    const lista = document.getElementById("serv-list")
-    const trigger = document.getElementById("trigger")
-    
+function pullList(gatilho, lista, icone){
+    const trigger = document.getElementById(gatilho)
+    const list = document.getElementById(lista)
+    const icon = document.getElementById(icone)
 
-    trigger.addEventListener('click', callList(),{
-
-        if (.classList.contains("")) {
-            
-        }
-    })
-}
+    if (trigger.classList.contains('hidden')) {
+        list.style.animation = "hiddenList 0.5s";
+        list.style.maxHeight = "1px"
+        trigger.classList.remove("hidden")
+        icon.style.animation = "downAngle 0.5s"
+        icon.style.transform = "rotate(0)"
+    } else {
+        list.style.animation = "useList 0.5s";
+        list.style.height = "auto"
+        list.style.maxHeight = "150px"
+        trigger.classList.add("hidden")
+        icon.style.animation = "upAngle 0.5s"
+        icon.style.transform = "rotate(180deg)"
+    }
+};

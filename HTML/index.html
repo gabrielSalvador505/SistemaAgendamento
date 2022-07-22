@@ -114,18 +114,45 @@
                             <p>selecione um serviço desejado</p>
                         </span>
                         <li class="classe">
-                            <span class="trigger show" onclick="useList()" id="trigger"><h3>Cabelo</h3><i class="fa-solid fa-angle-down"></i></span>
-                                <div class="service-list" id="serv-list">
+
+                                <span class="trigger" onclick="pullList('trigger1', 'serv-list1', 'angle1')" id="trigger1"><i class="fa-solid fa-angle-down fa-lg angle" id="angle1"></i><h3>Cabelo</h3></span>
+
+                                <div class="service-list" id="serv-list1">
                                     <input type="radio" id="item1" name="serv" value="item1" >
-                                    <label for="item1" class="item-list">Cabelo</label>
+                                    <label for="item1" class="item-list">item</label>
                                     <input type="radio" id="item2" name="serv" value="item2">
-                                    <label for="item2" class="item-list">Unha</label>
+                                    <label for="item2" class="item-list">item</label>
                                     <input type="radio" id="item3" name="serv" value="item3">
-                                    <label for="item3" class="item-list">Cílios</label>
+                                    <label for="item3" class="item-list">item</label>
                                 </div>
-                            <span class="trigger"><h3>Sobrancelha</h3></span>
-                            <span class="trigger"><h3>Cílios</h3></span>
-                            <span class="trigger"><h3>Unha</h3></span>
+
+                            <span class="trigger" onclick="pullList('trigger2', 'serv-list2', 'angle2')" id="trigger2"><i class="fa-solid fa-angle-down fa-lg angle" id="angle2"></i><h3>Sobrancelha</h3></span>
+
+                                <div class="service-list" id="serv-list2">
+                                    <input type="radio" id="item4" name="serv" value="item4">
+                                    <label for="item4" class="item-list">Sobrancelha</label>
+                                    <input type="radio" id="item5" name="serv" value="item5">
+                                    <label for="item5" class="item-list">item</label>
+                                </div>
+
+                            <span class="trigger" onclick="pullList('trigger3', 'serv-list3', 'angle3')" id="trigger3"><i class="fa-solid fa-angle-down fa-lg angle" id="angle3"></i><h3>Cílios</h3></span>
+
+                                <div class="service-list" id="serv-list3">
+                                    <input type="radio" id="item6" name="serv" value="item6">
+                                    <label for="item6" class="item-list">item</label>
+                                    <input type="radio" id="item7" name="serv" value="item7">
+                                    <label for="item7" class="item-list">item</label>
+                                    <input type="radio" id="item8" name="serv" value="item8">
+                                    <label for="item8" class="item-list">item</label>
+                                </div>
+
+                            <span class="trigger" onclick="pullList('trigger4', 'serv-list4', 'angle4')" id="trigger4"><i class="fa-solid fa-angle-down fa-lg angle" id="angle4"></i><h3>Unha</h3></span>
+
+                                <div class="service-list" id="serv-list4">
+                                    <input type="radio" id="item9" name="serv" value="item9">
+                                    <label for="item9" class="item-list">item</label>
+                                </div>
+
                         </li>
                            <!-- <input type="radio" id="item1" name="serv" value="item1" >
                             <label for="item1" class="item-list">Cabelo</label>
