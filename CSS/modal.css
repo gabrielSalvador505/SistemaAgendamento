@@ -30,7 +30,7 @@
     position: absolute;
     width: 40%;
     height: 100%;
-    background-image: linear-gradient(to bottom right, rgb(15, 50, 80) 0%, rgb(22, 86, 144) 30%, rgb(15, 50, 80) 100%);
+    background-image: linear-gradient(to bottom right, #5a1033 0%, #86174b 40%, #4d0d2b 100%);
     z-index: 2;
 }
 
@@ -103,17 +103,18 @@
 }
 .first-content h2 {
     font-size: 35px;
+    font-weight: 1000;
 }
 .first-content p {
     margin: 30px;
 }
 .first-content .btn {
     background-color: #fff;
-    color: #165690;
+    color: #86174b;
     border: none;
 }
 .first-content .btn:hover {
-    background-color: #165690;
+    background-color: #86174b;
     color: #fff;
 }
 .second-content {
@@ -124,9 +125,8 @@
     z-index: 1;
 }
 .second-content h2 {
-    margin: 15px;
     font-size: 35px;
-    font-weight: 800;
+    font-weight: 1000;
 }
 .second-content p {
     margin: 5px;
@@ -196,6 +196,8 @@ input:-webkit-autofill {
     display: flex;
     justify-content: center;
     transition: 2s;
+    overflow-y: auto;
+    animation: fadeIn 0.5;
 }
 
 .modal-service .first-content button {
@@ -214,37 +216,112 @@ input:-webkit-autofill {
     transform: translateY(2px);
     color: #fff;
     padding: 18px 4px 20px 8px;
-    border-radius: 15px;
 }
 
 .modal-service .first-content h3 {
     margin: 5px 10px 5px 5px;
-    color: #165690;
+    color: #86174b;
     font-size: 24px;
-    visibility: hidden
+    visibility: hidden;
 }
 
-.modal-service .first-content button:hover {
+.modal-service button:hover {
     background-color: #fff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 .modal-service .first-content button:hover .arrow {
-    color: #165690;
+    color: #86174b;
 }
 .modal-service .first-content button:hover h3{
     visibility: visible;
 }
 
+.modal-service .first-content #card-area {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    width: 80%;
+    top: 30%;
+}
+
+.modal-service .first-content .professional-input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.modal-service .first-content .professional-card {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 155px;
+    width: 140px;
+    margin: 10px;
+    padding: 5px 5px 5px 5px;
+    transition: 0.2s;
+    filter: grayscale(100%);
+    cursor: pointer;
+    animation: fadeImg 1s;
+}
+@keyframes fadeImg {
+    0% {
+        opacity: 0;
+    } 50% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+.modal-service .first-content .professional-card:hover {
+    transform: scale(105%);
+}
+
+.modal-service .first-content input[type=radio]:checked + .professional-card {
+    filter: grayscale(0%);
+}
+
+.modal-service .first-content .professional-card:hover {
+    filter: grayscale(0%);
+}
+.modal-service .first-content .professional-card:active {
+    transform: scale(95%);
+}
+
+.modal-service .first-content .professional-card img {
+    height: 100%;
+    width: 100%;
+}
+
+.professional-img{
+    position: relative;
+    height: 200px;
+    width: 200px;
+}
+
+.professional-card .name{
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 17px;
+}
+
 /*Second-content*/
-.modal-service .second-content p {
+.modal-service .second-content  {
+    height: 100%;
+    display: flex;
+    overflow: auto;
+}
+
+.modal-service p {
     margin: 0;
     font-size: 12px;
 }
-.modal-service .second-content span{
-    position: relative;
-    top: 5%;
-    height: 30%;
+.modal-service .title{
+    position: absolute;
+    top: 8%;
+    height: 10%;
     left: 50%;
     transform: translate(-50%);
 }
@@ -257,7 +334,7 @@ input:-webkit-autofill {
     top: 30%;
     left: 5%;
     background-color: #fff;
-    width: 95%;
+    width: 90%;
     height: auto;
 }
 
@@ -307,12 +384,12 @@ input:-webkit-autofill {
     from {
         max-height: 0px;
     } to {
-        max-height: 150px;;
+        max-height: 500px;;
     }
 }
 @keyframes hiddenList {
     from {
-        max-height: 150px;
+        max-height: 500px;
     } to {
         max-height: 0px;
     }
@@ -322,10 +399,10 @@ input:-webkit-autofill {
     background-color: #EBEBEB;
     color: #000;
     height: 50px;
-    width: 150px;
+    width: 130px;
     border-radius: 12px;
     font-size: 20px;
-    margin: 2%;
+    margin: 1%;
     font-family: sans-serif;
     cursor: pointer;
     display: flex;
@@ -336,17 +413,17 @@ input:-webkit-autofill {
     transition: 0.3s;
 }
 
-.modal-service .second-content .service-list input[type=radio]:checked  + label {
+.modal-service .second-content .service-list input[type=radio]:checked  + .item-list {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
-    background-color: #165690;
+    background-color: #86174b;
     color: #fff;
 }
 
-.modal-service .second-content .service-list input[type=radio]:active  + label {
+.modal-service .second-content .service-list input[type=radio]:active  + .item-list {
     box-shadow: none;
     transform: scale(90%);
     color: #fff;
-    background-color: #165690;
+    background-color: #86174b;
 }
 
 .modal-service .second-content input {
@@ -354,11 +431,42 @@ input:-webkit-autofill {
     position: absolute;
 }
 
-.modal-service .second-content  {
-    height: 100%;
+.modal-service .second-content button {
     display: flex;
-    overflow: auto;
+    flex-direction: row;
+    position: absolute;
+    bottom: -55px;
+    margin: 30px;
+    right: 0;
+    background-color: transparent;
+    border-radius: 15px;
+    border: none;
+    align-items: center;
+    transition: 0.5s;
 }
+
+.modal-service .second-content button h3 {
+    font-size: 24px;
+    order: 1;
+    margin: 5px 10px 5px 10px;
+    visibility: hidden;
+    color: #fff;
+}
+
+.modal-service .second-content button .arrow {
+    order: 2;
+    padding: 24px 15px 22px 2px;
+}
+.modal-service .second-content button:hover {
+    background-color: #86174b;
+}
+.modal-service .second-content button:hover h3 {
+    visibility: visible;
+}
+.modal-service .second-content button:hover .arrow {
+    color: #fff;
+}
+
 
 /*----------------------------------------------------
 ---display--------------------------------------------

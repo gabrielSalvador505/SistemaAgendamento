@@ -10,31 +10,29 @@
 </head>
 <body>
     <div class="grid">
-        <header>
-                <div class="logo">
-                    <div class="img"></div>
-                    <h1>NAILDESIGN</h1>
+        <div id="landing-page">
+            <header>
+                <div id="logo">
+                    <img src="../IMAGES/logo-img.png" alt="">
+                    <h2>Sistema</h2>
                 </div>
-                <div class="nav">
-                    <hr>
-                    <button class="nav-btn" onclick="startModal('show')">entrar</button>
+                <div id="nav-bar">
+                    <a href="#footer"><h3>Contato</h3></a>
+                    <h3>Admin</h3>
+                    <h3>item</h3>
                 </div>
-        </header>
-        <div class="container-1">
-            <div class="content">
-                <h1>Cuide De Você</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras accumsan lobortis nisl, at vestibulum metus fringilla nec. Fusce nec odio condimentum, luctus tellus sed, placerat quam. Curabitur tincidunt aliquam urna. Aliquam dictum nibh ex, eu efficitur mi imperdiet a. Integer eu hendrerit urna, non interdum ligula. Vestibulum sed magna in justo luctus finibus a sollicitudin turpis. Fusce elementum interdum tempus. Curabitur tincidunt, ex a lobortis gravida, lectus libero mollis elit, vitae fringilla risus leo vitae felis.
-                </p>
-                <a href="#main"><button class="btn">agendar</button></a>
+                <button class="btn">entrar</button>
+            </header>
+            <div id="content">
+                <h1>AGENDE JÁ...</h1>
+                <p>Nosso sistema torna o agendamento um processo simples e prático</p>
+                <a href="#main"><button class="btn"><i class="fa-solid fa-calendar-day icon"></i>agendar</button></a>
             </div>
         </div>
-        <div class="container-2">
-            <div class="grid">
-                <div class="img1 banner"></div>
-                <div class="img2 banner"></div>
-                <div class="img3 banner"></div>
-                <div class="img4 banner"></div>
-            </div>
+        <div id="our-team">
+            <h1>NOSSO TIME</h1>
+            
+
         </div>
         <div class="main" id="main">
             <div class="ini modal" id="modal">
@@ -43,7 +41,6 @@
                         <h2>Já Possuo Uma Conta</h2>
                         <p>Entrar utilizando seus dados já cadastrados</p>
                         <button id="login" class="btn" onclick="alterModal('login-js', 'register-js')">entrar</button>
-        
                     </div>
                     <div class="second-content">    
                         <h2>Criar Uma Conta</h2>
@@ -106,10 +103,41 @@
                 <div class="modal-content modal-service">
                     <div class="first-content">
                         <button onclick="alterModal('login-js', 'service-js')"><i class="fa-solid fa-arrow-left-long fa-2xl arrow"></i> <h3>voltar</h3></button>
-                        
+
+                        <span class="title">
+                            <h2>Profissionais</h2>
+                            <p>selecione o profissional desejado</p>
+                        </span>
+                        <div id="card-area">
+                            <input type="radio" name="professional" id="card1" class="professional-input item1">
+                            <label for="card1" class="professional-card"><img src="../IMAGES/professional.png" alt="" class="professional-img">
+                                <p class="name">Amanda</p>
+                            </label>
+
+                            <input type="radio" name="professional" id="card2" class="professional-input">
+                            <label for="card2" class="professional-card"><img src="../IMAGES/professional.png" alt="" class="professional-img">
+                                <p class="name">Amanda</p>
+                            </label>
+
+                            <input type="radio" name="professional" id="card3" class="professional-input">
+                            <label for="card3" class="professional-card"><img src="../IMAGES/professional.png" alt="" class="professional-img">
+                                <p class="name">Amanda</p>
+                            </label>
+
+                            <input type="radio" name="professional" id="card4" class="professional-input">
+                            <label for="card4" class="professional-card"><img src="../IMAGES/professional.png" alt="" class="professional-img">
+                                <p class="name">Amanda</p>
+                            </label>
+
+                            <input type="radio" name="professional" id="card5" class="professional-input">
+                            <label for="card5" class="professional-card"><img src="../IMAGES/professional.png" alt="" class="professional-img">
+                                <p class="name">Amanda</p>
+                            </label>
+
+                        </div>
                     </div>
                     <div class="second-content">
-                        <span>
+                        <span class="title">
                             <h2>Serviços</h2>
                             <p>selecione um serviço desejado</p>
                         </span>
@@ -118,12 +146,16 @@
                                 <span class="trigger" onclick="pullList('trigger1', 'serv-list1', 'angle1')" id="trigger1"><i class="fa-solid fa-angle-down fa-lg angle" id="angle1"></i><h3>Cabelo</h3></span>
 
                                 <div class="service-list" id="serv-list1">
-                                    <input type="radio" id="item1" name="serv" value="item1" >
+                                    <input type="radio" id="item1" name="serv" value="item1">
                                     <label for="item1" class="item-list">item</label>
                                     <input type="radio" id="item2" name="serv" value="item2">
                                     <label for="item2" class="item-list">item</label>
                                     <input type="radio" id="item3" name="serv" value="item3">
                                     <label for="item3" class="item-list">item</label>
+                                    <input type="radio" id="item3.5" name="serv" value="item3.5">
+                                    <label for="item3.5" class="item-list">item</label>
+                                    <input type="radio" id="item3.7" name="serv" value="item3.7">
+                                    <label for="item3.7" class="item-list">item</label>
                                 </div>
 
                             <span class="trigger" onclick="pullList('trigger2', 'serv-list2', 'angle2')" id="trigger2"><i class="fa-solid fa-angle-down fa-lg angle" id="angle2"></i><h3>Sobrancelha</h3></span>
@@ -152,33 +184,16 @@
                                     <input type="radio" id="item9" name="serv" value="item9">
                                     <label for="item9" class="item-list">item</label>
                                 </div>
-
+                            <button onclick="alterModal('service-js', 'calendar-js')"><i class="fa-solid fa-arrow-right-long fa-2xl arrow"></i> <h3>Continuar</h3></button>
                         </li>
-                           <!-- <input type="radio" id="item1" name="serv" value="item1" >
-                            <label for="item1" class="item-list">Cabelo</label>
-                            <input type="radio" id="item2" name="serv" value="item2">
-                            <label for="item2" class="item-list">Unha</label>
-                            <input type="radio" id="item3" name="serv" value="item3">
-                            <label for="item3" class="item-list">Cílios</label>
-                            <input type="radio" id="item4" name="serv" value="item4">
-                            <label for="item4" class="item-list">Sobrancelha</label>
-                            <input type="radio" id="item5" name="serv" value="item5">
-                            <label for="item5" class="item-list">item</label>
-                            <input type="radio" id="item6" name="serv" value="item6">
-                            <label for="item6" class="item-list">item</label>
-                            <input type="radio" id="item7" name="serv" value="item7">
-                            <label for="item7" class="item-list">item</label>
-                            <input type="radio" id="item8" name="serv" value="item8">
-                            <label for="item8" class="item-list">item</label>
-                            <input type="radio" id="item9" name="serv" value="item9">
-                            <label for="item9" class="item-list">item</label>-->
+                        
                     </div>
                 </div>
 
             </div>
                 
         </div>
-        <footer>
+        <footer id="footer">
             
         </footer>
     </div>
