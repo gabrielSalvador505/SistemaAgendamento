@@ -8,10 +8,10 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 65vh 65vh 65vh 100vh 30vh;
+    grid-template-rows: 800px 800px 600px 1000px 200px;
     grid-template-areas: "lp lp"
                         "ot ot"
-                        "ot ot"
+                        "os os"
                          "m m"
                          "f f";
 }
@@ -103,6 +103,7 @@ header .btn:hover {
     font-family: 'Koulen', sans-serif;
     font-weight: 800;
     font-size: 46px;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
 }
 #content p {
     margin: 15px;
@@ -127,13 +128,34 @@ header .btn:hover {
 ----------------------------------------------------*/
 #our-team {
     grid-area: ot;
-    
+    position: relative;
 }
 
-#our-team h1 {
+#team-content {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    padding: 20px;
+    width: 25%;
+    color: #fff;
+    background-color: #86174b;
+    box-shadow: 5px 5px 0 #000;
+}
+
+#team-content h1 {
     font-family: 'Koulen', sans-serif;
     font-weight: 800;
     font-size: 32px;
+    margin: 0 0 15px 0;
+}
+
+#team-corrossel {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    height: 90%;
+    width: 30%;
+    background-color: #e6e6e6;
 }
 /*----------------------------------------------------
 ---OUR SERVICE----------------------------------------
